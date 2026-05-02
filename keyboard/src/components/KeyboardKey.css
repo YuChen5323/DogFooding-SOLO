@@ -1,0 +1,63 @@
+.keycap-key {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.keycap-key:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.keycap-key.selected {
+  border: 2px solid #1890ff;
+  box-shadow: 0 0 0 2px #1890ff, 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.keycap-key.draggable {
+  cursor: grab;
+}
+
+.keycap-key.draggable:active {
+  cursor: grabbing;
+}
+
+.key-label {
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.key-profile-indicator {
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+  font-size: 8px;
+  opacity: 0.5;
+}
+
+.keycap-key::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+  border-radius: 4px 4px 0 0;
+}
+
+.keycap-key::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+  border-radius: 0 0 4px 4px;
+}

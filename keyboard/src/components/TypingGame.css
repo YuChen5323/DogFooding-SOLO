@@ -1,0 +1,141 @@
+.typing-game-container {
+  height: 100%;
+}
+
+.typing-text-display {
+  font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  word-wrap: break-word;
+  padding: 8px;
+}
+
+.char-pending {
+  color: #999;
+}
+
+.char-correct {
+  color: #52c41a;
+}
+
+.char-incorrect {
+  color: #ff4d4f;
+  text-decoration: underline;
+}
+
+.char-current {
+  background-color: #1890ff;
+  color: #fff;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+.finger-heatmap {
+  padding: 8px;
+}
+
+.finger-card {
+  transition: all 0.3s ease;
+}
+
+.finger-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+}
+
+.typing-stats-card {
+  text-align: center;
+}
+
+.typing-progress {
+  margin-top: 16px;
+}
+
+.typing-input-area {
+  margin-top: 16px;
+}
+
+.typing-buttons {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.result-alert {
+  margin-top: 16px;
+}
+
+.heatmap-container {
+  margin-top: 16px;
+}
+
+.heatmap-svg {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+}
+
+.heatmap-finger {
+  transition: all 0.3s ease;
+}
+
+.heatmap-finger:hover {
+  opacity: 0.8;
+}
+
+.heatmap-label {
+  font-size: 10px;
+  fill: #999;
+  text-anchor: middle;
+}
+
+.game-intro {
+  margin-top: 16px;
+}
+
+.intro-card {
+  text-align: center;
+  padding: 16px;
+}
+
+.intro-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.intro-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.intro-desc {
+  font-size: 12px;
+  color: #999;
+}
+
+.wpm-display {
+  color: #1890ff;
+}
+
+.accuracy-high {
+  color: #52c41a;
+}
+
+.accuracy-medium {
+  color: #faad14;
+}
+
+.accuracy-low {
+  color: #ff4d4f;
+}
+
+.feel-score {
+  color: #722ed1;
+}
+
+.time-display {
+  color: #fff;
+}

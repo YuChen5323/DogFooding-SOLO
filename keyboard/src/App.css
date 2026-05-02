@@ -1,0 +1,362 @@
+.main-layout {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.app-header {
+  background-color: var(--bg-secondary) !important;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu-btn {
+  display: none;
+  color: var(--text-primary);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-primary);
+  letter-spacing: 0.5px;
+}
+
+.app-sider {
+  background-color: var(--bg-secondary) !important;
+  border-right: 1px solid var(--border-color);
+  overflow-x: hidden;
+}
+
+.app-sider .ant-menu {
+  background-color: var(--bg-secondary) !important;
+  border-right: none !important;
+}
+
+.app-sider .ant-menu-item {
+  margin: 4px 8px;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px !important;
+  height: auto !important;
+  line-height: 1.4 !important;
+}
+
+.app-sider .ant-menu-item:hover {
+  background-color: var(--bg-tertiary) !important;
+}
+
+.app-sider .ant-menu-item-selected {
+  background-color: var(--accent-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.app-sider .ant-menu-item-selected .anticon {
+  color: var(--text-primary) !important;
+}
+
+.menu-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.menu-item-label {
+  font-weight: 500;
+  font-size: 14px;
+  color: inherit;
+}
+
+.menu-item-desc {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  opacity: 0.7;
+}
+
+.sider-footer {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  padding: 0 16px;
+}
+
+.version-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.version-label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.beta-tag {
+  font-size: 10px;
+  background-color: rgba(24, 144, 255, 0.2);
+  color: var(--accent-primary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.app-content {
+  background-color: var(--bg-primary);
+  min-height: calc(100vh - 64px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.ant-layout-sider-zero-width {
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
+  flex: 0 0 0 !important;
+}
+
+.ant-drawer-content {
+  background-color: var(--bg-secondary) !important;
+}
+
+.ant-drawer-header {
+  background-color: var(--bg-secondary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.ant-drawer-title {
+  color: var(--text-primary) !important;
+}
+
+.ant-drawer-close {
+  color: var(--text-secondary) !important;
+}
+
+.ant-drawer-body {
+  background-color: var(--bg-secondary) !important;
+  padding: 0 !important;
+}
+
+.ant-drawer-body .ant-menu {
+  background-color: var(--bg-secondary) !important;
+  border-right: none !important;
+}
+
+.ant-drawer-body .ant-menu-item {
+  margin: 4px 8px;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px !important;
+  height: auto !important;
+  line-height: 1.4 !important;
+}
+
+.ant-drawer-body .ant-menu-item:hover {
+  background-color: var(--bg-tertiary) !important;
+}
+
+.ant-drawer-body .ant-menu-item-selected {
+  background-color: var(--accent-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 0 16px;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+
+  .app-sider {
+    display: none;
+  }
+
+  .app-content {
+    min-height: calc(100vh - 64px);
+  }
+}
+
+.firmware-wizard-container,
+.typing-game-container,
+.layout-editor-container,
+.keycap-preview-container {
+  padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .firmware-wizard-container,
+  .typing-game-container,
+  .layout-editor-container,
+  .keycap-preview-container {
+    padding: 8px;
+  }
+}
+
+.ant-btn {
+  border-radius: var(--radius-sm) !important;
+}
+
+.ant-card {
+  border-radius: var(--radius-md) !important;
+}
+
+.ant-menu {
+  color: var(--text-secondary) !important;
+}
+
+.ant-menu .ant-menu-item {
+  color: var(--text-secondary) !important;
+}
+
+.ant-menu .ant-menu-item-selected {
+  color: var(--text-primary) !important;
+}
+
+.ant-menu .anticon {
+  color: var(--text-secondary) !important;
+}
+
+.ant-menu-item-selected .anticon {
+  color: var(--text-primary) !important;
+}
+
+.ant-layout {
+  background-color: var(--bg-primary) !important;
+}
+
+.ant-layout-header {
+  background-color: var(--bg-secondary) !important;
+}
+
+.ant-layout-sider {
+  background-color: var(--bg-secondary) !important;
+}
+
+.ant-layout-content {
+  background-color: var(--bg-primary) !important;
+}
+
+.ant-statistic-content-value-int {
+  color: var(--text-primary) !important;
+}
+
+.ant-statistic-content-value-decimal {
+  color: var(--text-primary) !important;
+}
+
+.ant-statistic-content-suffix {
+  color: var(--text-secondary) !important;
+}
+
+.ant-statistic-content-prefix {
+  color: var(--text-secondary) !important;
+}
+
+.ant-progress-text {
+  color: var(--text-secondary) !important;
+}
+
+.ant-divider-inner-text {
+  color: var(--text-tertiary) !important;
+}
+
+.ant-tag {
+  border-radius: var(--radius-sm) !important;
+}
+
+.ant-tabs-tab {
+  color: var(--text-tertiary) !important;
+}
+
+.ant-tabs-tab-active {
+  color: var(--accent-primary) !important;
+}
+
+.ant-tabs-tab:hover {
+  color: var(--accent-secondary) !important;
+}
+
+.ant-tabs-ink-bar {
+  background-color: var(--accent-primary) !important;
+}
+
+.ant-steps-item-wait .ant-steps-item-icon {
+  background-color: var(--bg-tertiary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.ant-steps-item-wait .ant-steps-item-content .ant-steps-item-title {
+  color: var(--text-tertiary) !important;
+}
+
+.ant-steps-item-wait .ant-steps-item-content .ant-steps-item-description {
+  color: var(--text-muted) !important;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon {
+  background-color: var(--accent-primary) !important;
+  border-color: var(--accent-primary) !important;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
+  color: var(--text-primary) !important;
+}
+
+.ant-steps-item-finish .ant-steps-item-content .ant-steps-item-title {
+  color: var(--text-secondary) !important;
+}
+
+.ant-steps-item-process .ant-steps-item-icon {
+  background-color: var(--accent-primary) !important;
+  border-color: var(--accent-primary) !important;
+}
+
+.ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon {
+  color: var(--text-primary) !important;
+}
+
+.ant-steps-item-process .ant-steps-item-content .ant-steps-item-title {
+  color: var(--text-primary) !important;
+}
+
+.ant-steps-item-error .ant-steps-item-icon {
+  background-color: var(--error) !important;
+  border-color: var(--error) !important;
+}
+
+.ant-steps-item-error .ant-steps-item-icon > .ant-steps-icon {
+  color: var(--text-primary) !important;
+}
+
+.ant-steps-item-error .ant-steps-item-content .ant-steps-item-title {
+  color: var(--error) !important;
+}

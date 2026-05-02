@@ -1,0 +1,171 @@
+.firmware-wizard-container {
+  height: 100%;
+}
+
+.wizard-steps {
+  margin-bottom: 24px;
+}
+
+.step-content {
+  min-height: 400px;
+}
+
+.mcu-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mcu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.mcu-card.selected {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.3);
+}
+
+.mcu-info {
+  margin-top: 24px;
+}
+
+.matrix-config {
+  padding: 16px 0;
+}
+
+.matrix-slider {
+  margin-bottom: 24px;
+}
+
+.pin-mapping {
+  margin-top: 24px;
+}
+
+.pin-select {
+  margin-bottom: 8px;
+}
+
+.feature-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  background-color: #252525;
+}
+
+.feature-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.feature-desc {
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
+.layer-config {
+  margin-top: 24px;
+}
+
+.config-summary {
+  margin-top: 24px;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+}
+
+.generate-section {
+  margin-top: 16px;
+}
+
+.generate-progress {
+  margin-bottom: 16px;
+}
+
+.hex-preview {
+  margin-top: 24px;
+}
+
+.hex-textarea {
+  font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+  font-size: 12px;
+  background-color: #0a0a0a;
+  border-color: #333;
+  color: #52c41a;
+}
+
+.wizard-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #333;
+}
+
+.diode-direction {
+  margin-top: 16px;
+}
+
+.diode-desc {
+  margin-left: 16px;
+  color: #999;
+  font-size: 12px;
+}
+
+.config-details {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.final-config-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.generate-button {
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  border: none;
+}
+
+.generate-button:hover {
+  background: linear-gradient(135deg, #40a9ff 0%, #1890ff 100%);
+}
+
+.save-config-button {
+  background-color: #1f1f1f;
+  border-color: #333;
+  color: #fff;
+}
+
+.save-config-button:hover {
+  background-color: #252525;
+  border-color: #40a9ff;
+  color: #40a9ff;
+}
+
+.success-alert {
+  margin-bottom: 16px;
+}
+
+.mcu-tag {
+  margin-bottom: 8px;
+}
+
+.mcu-tag-supported {
+  background-color: rgba(82, 196, 26, 0.2);
+  border-color: #52c41a;
+  color: #52c41a;
+}
+
+.mcu-tag-experimental {
+  background-color: rgba(140, 140, 140, 0.2);
+  border-color: #8c8c8c;
+  color: #8c8c8c;
+}

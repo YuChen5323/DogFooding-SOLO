@@ -1,0 +1,131 @@
+.layout-editor-container {
+  padding: 16px;
+}
+
+.layout-editor {
+  position: relative;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  overflow: auto;
+  min-height: 400px;
+}
+
+.layout-editor .ant-card {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+}
+
+.layout-editor .ant-card-head {
+  border-bottom: 1px solid #333;
+  color: #fff;
+}
+
+.layout-editor .ant-card-body {
+  padding: 24px;
+}
+
+.editor-toolbar {
+  position: sticky;
+  top: 16px;
+}
+
+.editor-toolbar .ant-card {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+}
+
+.editor-toolbar .ant-card-head {
+  border-bottom: 1px solid #333;
+  color: #fff;
+}
+
+.editor-toolbar .ant-card-body {
+  padding: 16px;
+}
+
+.key-properties {
+  background-color: #252525;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.key-properties .ant-input,
+.key-properties .ant-select {
+  background-color: #333;
+  border-color: #444;
+  color: #fff;
+}
+
+.key-properties .ant-input:focus,
+.key-properties .ant-select-focused .ant-select-selector {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.key-properties .ant-select-dropdown {
+  background-color: #1f1f1f;
+}
+
+.key-properties .ant-select-item {
+  color: #fff;
+}
+
+.key-properties .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: #2a2a2a;
+}
+
+.key-properties .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: #1890ff;
+}
+
+.ant-slider-track {
+  background-color: #1890ff;
+}
+
+.ant-slider-handle::after {
+  box-shadow: 0 0 0 2px #1890ff;
+}
+
+.ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.ant-btn-primary:hover {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.ant-btn-dangerous {
+  color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.ant-btn-dangerous:hover {
+  color: #ff7875;
+  border-color: #ff7875;
+}
+
+.ant-divider {
+  border-color: #333;
+  margin: 12px 0;
+}
+
+.ant-message-notice-content {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+.ant-popconfirm .ant-popover-inner {
+  background-color: #1f1f1f;
+}
+
+.ant-popconfirm .ant-popover-title {
+  color: #fff;
+}
+
+.ant-popconfirm .ant-popover-inner-content {
+  color: #aaa;
+}
