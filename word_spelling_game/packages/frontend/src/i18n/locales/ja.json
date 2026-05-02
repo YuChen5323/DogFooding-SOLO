@@ -1,0 +1,161 @@
+{
+  "common": {
+    "play": "プレイ",
+    "settings": "設定",
+    "leaderboard": "ランキング",
+    "achievements": "実績",
+    "profile": "プロフィール",
+    "login": "ログイン",
+    "register": "新規登録",
+    "logout": "ログアウト",
+    "back": "戻る",
+    "next": "次へ",
+    "continue": "続ける",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "save": "保存",
+    "reset": "リセット",
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功",
+    "retry": "再試行",
+    "close": "閉じる"
+  },
+  "menu": {
+    "title": "ワードスペリングゲーム",
+    "subtitle": "楽しみながら学ぼう！",
+    "quickPlay": "クイックプレイ",
+    "selectLevel": "レベル選択",
+    "gameModes": "ゲームモード"
+  },
+  "gameModes": {
+    "falling": {
+      "name": "落下する文字",
+      "description": "落下する文字をキャッチして単語をスペルしよう！地面に着く前に正しい文字を入力してください。"
+    },
+    "puzzle": {
+      "name": "文字パズル",
+      "description": "シャッフルされた文字を並べ替えて正しい単語を作ろう。ドラッグ＆ドロップで解いていきます！"
+    },
+    "speed": {
+      "name": "スピードスペル",
+      "description": "時間との勝負！60秒間でできるだけ多くの単語をスペルしよう。"
+    }
+  },
+  "game": {
+    "score": "スコア",
+    "combo": "コンボ",
+    "lives": "ライフ",
+    "time": "時間",
+    "word": "単語",
+    "level": "レベル",
+    "correct": "正解！",
+    "wrong": "不正解！",
+    "perfect": "パーフェクト！",
+    "pause": "一時停止",
+    "resume": "再開",
+    "quit": "終了",
+    "restart": "リスタート"
+  },
+  "levelComplete": {
+    "title": "レベルクリア！",
+    "score": "最終スコア",
+    "correctWords": "正解した単語",
+    "wrongWords": "不正解だった単語",
+    "maxCombo": "最大コンボ",
+    "accuracy": "正解率",
+    "stars": "獲得したスター",
+    "nextLevel": "次のレベル",
+    "replay": "リプレイ",
+    "backToMenu": "メニューに戻る"
+  },
+  "gameOver": {
+    "title": "ゲームオーバー",
+    "score": "最終スコア",
+    "tryAgain": "もう一度挑戦",
+    "backToMenu": "メニューに戻る"
+  },
+  "auth": {
+    "loginTitle": "おかえりなさい",
+    "registerTitle": "アカウント作成",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "confirmPassword": "パスワード（確認）",
+    "username": "ユーザー名",
+    "forgotPassword": "パスワードを忘れた？",
+    "noAccount": "アカウントを持っていませんか？",
+    "hasAccount": "すでにアカウントを持っていますか？",
+    "loginSuccess": "ログインしました！",
+    "registerSuccess": "アカウントを作成しました！",
+    "emailRequired": "メールアドレスを入力してください",
+    "passwordRequired": "パスワードを入力してください",
+    "usernameRequired": "ユーザー名を入力してください",
+    "passwordMismatch": "パスワードが一致しません"
+  },
+  "profile": {
+    "title": "プロフィール",
+    "level": "レベル",
+    "experience": "経験値",
+    "coins": "コイン",
+    "wordsLearned": "学習した単語",
+    "currentStreak": "現在の連続記録",
+    "friends": "フレンド",
+    "editProfile": "プロフィール編集",
+    "achievements": "実績"
+  },
+  "settings": {
+    "title": "設定",
+    "language": "言語",
+    "soundEffects": "効果音",
+    "music": "音楽",
+    "tts": "テキスト読み上げ",
+    "ttsVoice": "TTSボイス",
+    "darkMode": "ダークモード",
+    "touchControls": "タッチ操作",
+    "notifications": "通知",
+    "reset": "設定をリセット",
+    "about": "このアプリについて",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  },
+  "leaderboard": {
+    "title": "ランキング",
+    "global": "グローバル",
+    "friends": "フレンド",
+    "daily": "デイリー",
+    "weekly": "ウィークリー",
+    "allTime": "オールタイム",
+    "rank": "順位",
+    "player": "プレイヤー",
+    "score": "スコア",
+    "you": "あなた"
+  },
+  "achievements": {
+    "title": "実績",
+    "unlocked": "獲得済み",
+    "locked": "未獲得",
+    "beginner": "初心者",
+    "intermediate": "中級者",
+    "advanced": "上級者",
+    "master": "マスター",
+    "unlockedAt": "獲得日時",
+    "reward": "報酬"
+  },
+  "levels": {
+    "categories": "カテゴリ",
+    "unlockNext": "前のレベルをクリアして解除",
+    "stars": "スター",
+    "bestScore": "ベストスコア"
+  },
+  "errors": {
+    "network": "ネットワークエラー。接続を確認してください。",
+    "server": "サーバーエラー。後でもう一度お試しください。",
+    "auth": "認証に失敗しました。再度ログインしてください。",
+    "offline": "オフラインです。一部の機能が利用できない場合があります。"
+  },
+  "offline": {
+    "title": "オフラインモード",
+    "message": "オフラインでプレイしています。再接続時に進捗が同期されます。",
+    "continueOffline": "オフラインで続ける"
+  }
+}

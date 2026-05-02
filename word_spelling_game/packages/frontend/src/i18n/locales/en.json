@@ -1,0 +1,161 @@
+{
+  "common": {
+    "play": "Play",
+    "settings": "Settings",
+    "leaderboard": "Leaderboard",
+    "achievements": "Achievements",
+    "profile": "Profile",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "back": "Back",
+    "next": "Next",
+    "continue": "Continue",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "reset": "Reset",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "retry": "Retry",
+    "close": "Close"
+  },
+  "menu": {
+    "title": "Word Spelling Game",
+    "subtitle": "Learn while having fun!",
+    "quickPlay": "Quick Play",
+    "selectLevel": "Select Level",
+    "gameModes": "Game Modes"
+  },
+  "gameModes": {
+    "falling": {
+      "name": "Falling Letters",
+      "description": "Catch the falling letters to spell words. Type the correct letter before it hits the ground!"
+    },
+    "puzzle": {
+      "name": "Letter Puzzle",
+      "description": "Rearrange the scrambled letters to form the correct word. Drag and drop to solve!"
+    },
+    "speed": {
+      "name": "Speed Spell",
+      "description": "Race against the clock! Spell as many words as you can in 60 seconds."
+    }
+  },
+  "game": {
+    "score": "Score",
+    "combo": "Combo",
+    "lives": "Lives",
+    "time": "Time",
+    "word": "Word",
+    "level": "Level",
+    "correct": "Correct!",
+    "wrong": "Wrong!",
+    "perfect": "Perfect!",
+    "pause": "Pause",
+    "resume": "Resume",
+    "quit": "Quit",
+    "restart": "Restart"
+  },
+  "levelComplete": {
+    "title": "Level Complete!",
+    "score": "Final Score",
+    "correctWords": "Correct Words",
+    "wrongWords": "Wrong Words",
+    "maxCombo": "Max Combo",
+    "accuracy": "Accuracy",
+    "stars": "Stars Earned",
+    "nextLevel": "Next Level",
+    "replay": "Replay",
+    "backToMenu": "Back to Menu"
+  },
+  "gameOver": {
+    "title": "Game Over",
+    "score": "Final Score",
+    "tryAgain": "Try Again",
+    "backToMenu": "Back to Menu"
+  },
+  "auth": {
+    "loginTitle": "Welcome Back",
+    "registerTitle": "Create Account",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "username": "Username",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginSuccess": "Login successful!",
+    "registerSuccess": "Account created successfully!",
+    "emailRequired": "Email is required",
+    "passwordRequired": "Password is required",
+    "usernameRequired": "Username is required",
+    "passwordMismatch": "Passwords do not match"
+  },
+  "profile": {
+    "title": "Profile",
+    "level": "Level",
+    "experience": "Experience",
+    "coins": "Coins",
+    "wordsLearned": "Words Learned",
+    "currentStreak": "Current Streak",
+    "friends": "Friends",
+    "editProfile": "Edit Profile",
+    "achievements": "Achievements"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "soundEffects": "Sound Effects",
+    "music": "Music",
+    "tts": "Text-to-Speech",
+    "ttsVoice": "TTS Voice",
+    "darkMode": "Dark Mode",
+    "touchControls": "Touch Controls",
+    "notifications": "Notifications",
+    "reset": "Reset Settings",
+    "about": "About",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "global": "Global",
+    "friends": "Friends",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "allTime": "All Time",
+    "rank": "Rank",
+    "player": "Player",
+    "score": "Score",
+    "you": "You"
+  },
+  "achievements": {
+    "title": "Achievements",
+    "unlocked": "Unlocked",
+    "locked": "Locked",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "master": "Master",
+    "unlockedAt": "Unlocked at",
+    "reward": "Reward"
+  },
+  "levels": {
+    "categories": "Categories",
+    "unlockNext": "Complete previous level to unlock",
+    "stars": "Stars",
+    "bestScore": "Best Score"
+  },
+  "errors": {
+    "network": "Network error. Please check your connection.",
+    "server": "Server error. Please try again later.",
+    "auth": "Authentication failed. Please login again.",
+    "offline": "You are offline. Some features may be unavailable."
+  },
+  "offline": {
+    "title": "Offline Mode",
+    "message": "You are playing offline. Your progress will be synced when you reconnect.",
+    "continueOffline": "Continue Offline"
+  }
+}
