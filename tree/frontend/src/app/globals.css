@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 50% 98%;
+    --foreground: 20 40% 15%;
+    --card: 30 30% 97%;
+    --card-foreground: 20 40% 15%;
+    --popover: 30 30% 97%;
+    --popover-foreground: 20 40% 15%;
+    --primary: 25 70% 50%;
+    --primary-foreground: 30 50% 98%;
+    --secondary: 30 40% 85%;
+    --secondary-foreground: 20 40% 15%;
+    --muted: 30 20% 90%;
+    --muted-foreground: 20 20% 40%;
+    --accent: 35 60% 60%;
+    --accent-foreground: 20 40% 15%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 30 50% 98%;
+    --border: 30 30% 80%;
+    --input: 30 30% 80%;
+    --ring: 25 70% 50%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 30% 12%;
+    --foreground: 30 20% 90%;
+    --card: 20 30% 15%;
+    --card-foreground: 30 20% 90%;
+    --popover: 20 30% 15%;
+    --popover-foreground: 30 20% 90%;
+    --primary: 25 60% 55%;
+    --primary-foreground: 20 40% 10%;
+    --secondary: 20 25% 25%;
+    --secondary-foreground: 30 20% 90%;
+    --muted: 20 25% 25%;
+    --muted-foreground: 30 10% 70%;
+    --accent: 30 50% 40%;
+    --accent-foreground: 30 20% 90%;
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 30 20% 90%;
+    --border: 20 25% 25%;
+    --input: 20 25% 25%;
+    --ring: 25 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-wood-200;
+  }
+  body {
+    @apply bg-wood-50 text-wood-900;
+  }
+}
+
+@layer components {
+  .wood-panel {
+    @apply bg-gradient-to-br from-wood-100 to-wood-200 border border-wood-300 rounded-lg shadow-md;
+  }
+  .wood-button {
+    @apply bg-gradient-to-r from-wood-500 to-wood-600 hover:from-wood-600 hover:to-wood-700 text-white font-medium py-2 px-4 rounded-lg shadow-md transition-all duration-200 active:scale-95;
+  }
+  .wood-button-outline {
+    @apply border-2 border-wood-500 text-wood-600 hover:bg-wood-50 font-medium py-2 px-4 rounded-lg transition-all duration-200;
+  }
+  .scrollbar-wood::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scrollbar-wood::-webkit-scrollbar-track {
+    background: theme('colors.wood.100');
+    border-radius: 4px;
+  }
+  .scrollbar-wood::-webkit-scrollbar-thumb {
+    background: theme('colors.wood.400');
+    border-radius: 4px;
+  }
+  .scrollbar-wood::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.wood.500');
+  }
+}
+
+/* Canvas specific styles */
+.canvas-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.canvas-container canvas {
+  outline: none;
+}
+
+/* Drag and drop styles */
+.draggable-item {
+  cursor: grab;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.draggable-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.draggable-item:active {
+  cursor: grabbing;
+}
+
+/* Drop zone styles */
+.drop-zone {
+  border: 2px dashed theme('colors.wood.400');
+  background: rgba(139, 90, 43, 0.05);
+  transition: all 0.3s;
+}
+
+.drop-zone.drag-over {
+  border-color: theme('colors.wood.600');
+  background: rgba(139, 90, 43, 0.1);
+}
+
+/* Animation for stress visualization */
+@keyframes pulse-stress {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.stress-high {
+  animation: pulse-stress 1s ease-in-out infinite;
+}
