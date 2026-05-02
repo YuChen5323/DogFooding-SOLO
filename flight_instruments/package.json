@@ -1,0 +1,30 @@
+{
+  "name": "flight-instruments-simulator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Flight Instruments Simulator - Full Stack React + Node.js Application",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "build": "npm run build --workspace=frontend && npm run build --workspace=backend",
+    "start": "npm run start --workspace=backend",
+    "install:all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "flight",
+    "instruments",
+    "simulator",
+    "react",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT"
+}
