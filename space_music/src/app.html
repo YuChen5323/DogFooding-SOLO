@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="theme-color" content="#0a0a1a" />
+		<meta name="description" content="太空音乐节奏射击游戏 - 跟随音乐节拍，击落敌人！" />
+		<title>Space Music - 太空音乐节奏射击</title>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<style>
+			*, *::before, *::after {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			:root {
+				--bg-primary: #0a0a1a;
+				--bg-secondary: #121228;
+				--bg-tertiary: #1a1a3a;
+				--accent-cyan: #00ffff;
+				--accent-magenta: #ff00ff;
+				--accent-yellow: #ffff00;
+				--accent-red: #ff0066;
+				--accent-green: #00ff00;
+				--accent-orange: #ff6600;
+				--text-primary: #ffffff;
+				--text-secondary: #aaaaaa;
+				--text-muted: #666666;
+				--border-color: rgba(0, 255, 255, 0.3);
+				--glow-cyan: 0 0 10px var(--accent-cyan), 0 0 20px var(--accent-cyan), 0 0 30px var(--accent-cyan);
+				--glow-magenta: 0 0 10px var(--accent-magenta), 0 0 20px var(--accent-magenta);
+				--glow-yellow: 0 0 10px var(--accent-yellow), 0 0 20px var(--accent-yellow);
+				--font-primary: 'Orbitron', 'Segoe UI', system-ui, -apple-system, sans-serif;
+				--font-secondary: 'Rajdhani', 'Segoe UI', system-ui, -apple-system, sans-serif;
+				--transition-fast: 0.15s ease;
+				--transition-medium: 0.3s ease;
+				--transition-slow: 0.5s ease;
+			}
+
+			html, body {
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+				font-family: var(--font-secondary);
+				font-size: 16px;
+				line-height: 1.5;
+				color: var(--text-primary);
+				background: var(--bg-primary);
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+			body {
+				background: linear-gradient(135deg, var(--bg-primary) 0%, #0a0a2a 50%, #1a0a2a 100%);
+				background-attachment: fixed;
+			}
+
+			body::before {
+				content: '';
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: 
+					radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
+					radial-gradient(2px 2px at 60px 70px, rgba(0, 255, 255, 0.2), transparent),
+					radial-gradient(1px 1px at 50px 50px, rgba(255, 0, 255, 0.3), transparent),
+					radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 0, 0.2), transparent);
+				background-size: 200px 200px;
+				pointer-events: none;
+				z-index: 0;
+			}
+
+			::selection {
+				background: var(--accent-cyan);
+				color: var(--bg-primary);
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				font-family: var(--font-primary);
+				font-weight: 700;
+				line-height: 1.2;
+				color: var(--text-primary);
+			}
+
+			button {
+				font-family: var(--font-primary);
+				font-weight: 600;
+				cursor: pointer;
+				border: none;
+				outline: none;
+				background: none;
+				transition: all var(--transition-fast);
+			}
+
+			input, select, textarea {
+				font-family: var(--font-secondary);
+				outline: none;
+			}
+
+			a {
+				color: var(--accent-cyan);
+				text-decoration: none;
+				transition: color var(--transition-fast);
+			}
+
+			a:hover {
+				color: var(--accent-magenta);
+				text-shadow: var(--glow-cyan);
+			}
+
+			::-webkit-scrollbar {
+				width: 8px;
+				height: 8px;
+			}
+
+			::-webkit-scrollbar-track {
+				background: var(--bg-secondary);
+			}
+
+			::-webkit-scrollbar-thumb {
+				background: var(--accent-cyan);
+				border-radius: 4px;
+			}
+
+			::-webkit-scrollbar-thumb:hover {
+				background: var(--accent-magenta);
+			}
+
+			@keyframes pulse {
+				0%, 100% { opacity: 1; transform: scale(1); }
+				50% { opacity: 0.7; transform: scale(1.02); }
+			}
+
+			@keyframes glow {
+				0%, 100% { filter: drop-shadow(0 0 5px var(--accent-cyan)); }
+				50% { filter: drop-shadow(0 0 20px var(--accent-cyan)) drop-shadow(0 0 30px var(--accent-magenta)); }
+			}
+
+			@keyframes slideIn {
+				from { opacity: 0; transform: translateY(-20px); }
+				to { opacity: 1; transform: translateY(0); }
+			}
+
+			@keyframes fadeIn {
+				from { opacity: 0; }
+				to { opacity: 1; }
+			}
+
+			@keyframes scanline {
+				0% { transform: translateY(-100%); }
+				100% { transform: translateY(100vh); }
+			}
+
+			.scanline::after {
+				content: '';
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 2px;
+				background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+				animation: scanline 4s linear infinite;
+				pointer-events: none;
+				z-index: 1000;
+			}
+
+			@media (max-width: 768px) {
+				html {
+					font-size: 14px;
+				}
+			}
+
+			@media (max-width: 480px) {
+				html {
+					font-size: 12px;
+				}
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				*, *::before, *::after {
+					animation-duration: 0.01ms !important;
+					animation-iteration-count: 1 !important;
+					transition-duration: 0.01ms !important;
+				}
+			}
+		</style>
+		%sveltekit.head%
+	</head>
+	<body class="scanline" data-sveltekit-preload-data="hover">
+		<div style="display: contents; position: relative; z-index: 1;">%sveltekit.body%</div>
+	</body>
+</html>
