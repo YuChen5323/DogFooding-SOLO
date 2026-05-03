@@ -1,0 +1,263 @@
+:root {
+  --clinic-white: #f8f5f0;
+  --clinic-cream: #f0e6d6;
+  --clinic-light-gray: #e8e0d5;
+  --clinic-gray: #8b8680;
+  --clinic-dark: #4a4845;
+  --acupoint-red: #e74c3c;
+  --acupoint-gold: #d4af37;
+  --meridian-blue: #3498db;
+  --meridian-green: #27ae60;
+  --meridian-red: #e74c3c;
+  --meridian-yellow: #f1c40f;
+  --meridian-black: #2c3e50;
+  --meridian-purple: #8e44ad;
+  --needle-silver: #c0c0c0;
+  --layer-skin: #fad6a5;
+  --layer-muscle: #c0392b;
+  --layer-vessel: #e74c3c;
+  --layer-tendon: #95a5a6;
+  --layer-bone: #ecf0f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', sans-serif;
+  background-color: var(--clinic-white);
+  color: var(--clinic-dark);
+}
+
+#root {
+  position: relative;
+}
+
+/* Custom scrollbar for clinic style */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--clinic-light-gray);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clinic-gray);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clinic-dark);
+}
+
+/* Clinic-style buttons */
+.clinic-btn {
+  background-color: var(--clinic-cream);
+  border: 1px solid var(--clinic-light-gray);
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: var(--clinic-dark);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.clinic-btn:hover {
+  background-color: var(--clinic-light-gray);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.clinic-btn.active {
+  background-color: var(--acupoint-gold);
+  color: white;
+  border-color: var(--acupoint-gold);
+}
+
+.clinic-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Clinic-style panels */
+.clinic-panel {
+  background-color: rgba(248, 245, 240, 0.95);
+  border: 1px solid var(--clinic-light-gray);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* Panel headers */
+.clinic-panel-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--clinic-light-gray);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--clinic-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Panel content */
+.clinic-panel-content {
+  padding: 16px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Point indicator styles */
+.acupoint-indicator {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--acupoint-red);
+  border: 2px solid var(--acupoint-gold);
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.acupoint-indicator.selected {
+  transform: scale(1.5);
+  box-shadow: 0 0 15px rgba(231, 76, 60, 0.8);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.8);
+    opacity: 0.8;
+  }
+}
+
+/* Meridian line styles */
+.meridian-line {
+  stroke-dasharray: 5, 5;
+  animation: dash 20s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+/* Needle insertion indicator */
+.needle-depth-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--clinic-white);
+  border: 1px solid var(--clinic-light-gray);
+  border-radius: 8px;
+  padding: 12px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.needle-depth-indicator .layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.needle-depth-indicator .layer-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+}
+
+.needle-depth-indicator .layer-circle.active {
+  background-color: currentColor;
+}
+
+.needle-depth-indicator .layer-name {
+  font-size: 12px;
+  color: var(--clinic-gray);
+}
+
+/* Deqi feedback indicator */
+.deqi-indicator {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.deqi-indicator.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.deqi-indicator.success {
+  background-color: rgba(39, 174, 96, 0.9);
+  color: white;
+}
+
+.deqi-indicator.info {
+  background-color: var(--clinic-cream);
+  color: var(--clinic-dark);
+  border: 1px solid var(--clinic-light-gray);
+}
+
+/* Loading indicator */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--clinic-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--clinic-light-gray);
+  border-top-color: var(--acupoint-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 16px;
+  color: var(--clinic-gray);
+  font-size: 14px;
+}
