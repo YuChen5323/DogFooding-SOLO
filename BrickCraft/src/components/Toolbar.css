@@ -1,0 +1,222 @@
+/* 工具栏样式 - 乐高风格 */
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--lego-dark-gray);
+  border-bottom: 2px solid var(--lego-black);
+}
+
+.toolbar-section {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.toolbar-section:last-child {
+  border-right: none;
+}
+
+.toolbar-section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 8px;
+}
+
+.toolbar-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 8px 12px;
+  background: var(--lego-gray);
+  border: 2px solid transparent;
+  border-radius: 4px;
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  min-width: 56px;
+}
+
+.toolbar-btn:hover {
+  background: var(--lego-light-gray);
+  color: var(--lego-black);
+}
+
+.toolbar-btn.active {
+  background: var(--lego-yellow);
+  color: var(--lego-black);
+  border-color: var(--lego-black);
+}
+
+.toolbar-btn.danger {
+  background: var(--lego-red);
+  color: white;
+}
+
+.toolbar-btn.danger:hover {
+  background: #ff4444;
+}
+
+.toolbar-btn.danger.active {
+  background: var(--lego-red);
+  color: white;
+  border-color: white;
+}
+
+.toolbar-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toolbar-btn-icon {
+  font-size: 18px;
+}
+
+.toolbar-btn-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* 分隔符 */
+.toolbar-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255,255,255,0.2);
+  margin: 0 8px;
+}
+
+/* 模式切换按钮组 */
+.mode-toggle {
+  display: flex;
+  background: var(--lego-gray);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.mode-toggle-btn {
+  padding: 6px 12px;
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.mode-toggle-btn:hover {
+  color: white;
+}
+
+.mode-toggle-btn.active {
+  background: var(--lego-yellow);
+  color: var(--lego-black);
+}
+
+/* 历史按钮 */
+.history-btn {
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+/* 项目操作按钮 */
+.project-btn {
+  padding: 8px 14px;
+  background: var(--lego-blue);
+}
+
+.project-btn:hover {
+  background: var(--lego-blue-hover);
+}
+
+.project-btn.secondary {
+  background: var(--lego-green);
+}
+
+.project-btn.secondary:hover {
+  background: #00a000;
+}
+
+.project-btn.export {
+  background: var(--lego-orange);
+}
+
+.project-btn.export:hover {
+  background: #ff8800;
+}
+
+/* 快捷键提示 */
+.shortcut {
+  font-size: 9px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 1px;
+}
+
+/* 统计信息 */
+.stats-display {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+  padding: 4px 12px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.9);
+}
+
+.stat-value {
+  font-weight: 600;
+  color: var(--lego-yellow);
+}
+
+/* 加载中指示器 */
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: var(--lego-yellow);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  font-size: 12px;
+  color: rgba(255,255,255,0.9);
+}

@@ -1,0 +1,233 @@
+/* 乐高风格主色调 */
+:root {
+  --lego-yellow: #ffdb00;
+  --lego-yellow-dark: #ffc700;
+  --lego-yellow-light: #fff5cc;
+  --lego-red: #e3000b;
+  --lego-red-hover: #ff4444;
+  --lego-blue: #006db7;
+  --lego-blue-hover: #0088cc;
+  --lego-green: #009e3d;
+  --lego-green-hover: #00b844;
+  --lego-orange: #f07d13;
+  --lego-black: #000000;
+  --lego-white: #ffffff;
+  --lego-gray: #898788;
+  --lego-light-gray: #e0e0e0;
+  --lego-dark-gray: #595959;
+  --lego-bluish-gray: #9ca1a4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--lego-light-gray);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+/* 主布局容器 */
+.app-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* 左侧零件库 */
+.part-library-panel {
+  width: 300px;
+  min-width: 250px;
+  max-width: 400px;
+  background: var(--lego-light-gray);
+  border-right: 2px solid var(--lego-dark-gray);
+  display: flex;
+  flex-direction: column;
+  resize: horizontal;
+  overflow: hidden;
+}
+
+/* 中间3D场景区域 */
+.scene-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 头部 */
+.app-header {
+  background-color: var(--lego-yellow);
+  color: var(--lego-black);
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border-bottom: 3px solid var(--lego-red);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-header h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-header h1::before {
+  content: '🧱';
+  font-size: 1.6rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--lego-dark-gray);
+}
+
+.header-right a {
+  color: var(--lego-blue);
+  text-decoration: none;
+}
+
+.header-right a:hover {
+  text-decoration: underline;
+}
+
+/* 工具栏 */
+.toolbar-wrapper {
+  border-bottom: 2px solid var(--lego-dark-gray);
+}
+
+/* 主内容区域 */
+.app-main {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.app-main canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* 底部状态栏 */
+.app-footer {
+  background-color: var(--lego-dark-gray);
+  color: var(--lego-white);
+  padding: 0.4rem 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  border-top: 2px solid var(--lego-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-left, .footer-center, .footer-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lego-green);
+}
+
+.status-dot.warning {
+  background: var(--lego-yellow);
+}
+
+.status-dot.error {
+  background: var(--lego-red);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .part-library-panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .part-library-panel.open {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 0.5rem 1rem;
+  }
+  
+  .app-header h1 {
+    font-size: 1.2rem;
+  }
+  
+  .app-footer {
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+  }
+  
+  .footer-left, .footer-center, .footer-right {
+    gap: 8px;
+  }
+}
+
+/* 拖拽样式 */
+.drag-over {
+  background: var(--lego-yellow-light);
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--lego-light-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--lego-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lego-dark-gray);
+}
+
+/* 选择文本样式 */
+::selection {
+  background: var(--lego-yellow);
+  color: var(--lego-black);
+}
