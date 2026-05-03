@@ -1,0 +1,162 @@
+.move-tree {
+  background: linear-gradient(145deg, #2c1810, #3c2820);
+  padding: 16px;
+  border-radius: 8px;
+  color: #f5f5dc;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.move-tree.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  color: #8b7355;
+}
+
+.tree-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.tree-header h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #f5de9d;
+}
+
+.tree-legend {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tree-scroll {
+  overflow-y: auto;
+  overflow-x: auto;
+  flex: 1;
+}
+
+.tree-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.tree-scroll::-webkit-scrollbar-track {
+  background: #2c1810;
+  border-radius: 4px;
+}
+
+.tree-scroll::-webkit-scrollbar-thumb {
+  background: #6b5344;
+  border-radius: 4px;
+}
+
+.tree-scroll::-webkit-scrollbar-thumb:hover {
+  background: #8b7355;
+}
+
+.tree-node {
+  user-select: none;
+}
+
+.tree-node-content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.tree-node-content:hover {
+  background: rgba(139, 115, 85, 0.3);
+}
+
+.tree-node-content.selected {
+  background: linear-gradient(90deg, #4a7c59, #3a6c49);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tree-node-content.has-variation {
+  font-weight: 500;
+}
+
+.move-indicator {
+  font-size: 14px;
+}
+
+.move-indicator.black {
+  color: #1a1a1a;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.move-indicator.white {
+  color: #f5f5f5;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.move-number {
+  font-size: 12px;
+  color: #c9b99a;
+  min-width: 24px;
+}
+
+.move-label {
+  font-size: 12px;
+  color: #f5f5dc;
+}
+
+.variation-badge {
+  font-size: 10px;
+  background: #8b5a2b;
+  color: #f5de9d;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+.comment-icon {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.tree-children {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .move-tree {
+    padding: 12px;
+    max-height: 300px;
+  }
+
+  .tree-header {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .tree-node-content {
+    padding: 4px 8px;
+    gap: 4px;
+  }
+
+  .move-number,
+  .move-label {
+    font-size: 11px;
+  }
+}

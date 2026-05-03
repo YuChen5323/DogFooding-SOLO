@@ -1,0 +1,173 @@
+.game-controls {
+  background: #2c1810;
+  padding: 16px;
+  border-radius: 8px;
+  color: #f5f5dc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.controls-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.controls-row:last-child {
+  margin-bottom: 0;
+}
+
+.navigation-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-btn {
+  background: linear-gradient(145deg, #8b7355, #6b5344);
+  border: 1px solid #4a3728;
+  color: #f5f5dc;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+}
+
+.control-btn:hover:not(:disabled) {
+  background: linear-gradient(145deg, #9b8365, #7b6354);
+  transform: translateY(-1px);
+}
+
+.control-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.control-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.control-btn.active {
+  background: linear-gradient(145deg, #4a7c59, #3a6c49);
+  border-color: #2a5c39;
+}
+
+.control-btn.danger {
+  background: linear-gradient(145deg, #c44536, #a33526);
+  border-color: #832516;
+}
+
+.control-btn.danger:hover:not(:disabled) {
+  background: linear-gradient(145deg, #d45546, #b34536);
+}
+
+.control-btn.primary {
+  background: linear-gradient(145deg, #2d5a87, #1d4a77);
+  border-color: #0d3a67;
+}
+
+.control-btn.primary:hover:not(:disabled) {
+  background: linear-gradient(145deg, #3d6a97, #2d5a87);
+}
+
+.control-btn .icon {
+  font-size: 16px;
+}
+
+.move-counter {
+  min-width: 80px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #f5de9d;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.turn-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.captures {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.capture-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stone-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.stone-dot.black {
+  background: radial-gradient(circle at 30% 30%, #3a3a3a, #1a1a1a);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.stone-dot.white {
+  background: radial-gradient(circle at 30% 30%, #ffffff, #d3d3d3);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .game-controls {
+    padding: 12px;
+  }
+
+  .control-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .move-counter {
+    font-size: 14px;
+  }
+
+  .game-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .turn-indicator {
+    font-size: 14px;
+  }
+
+  .captures {
+    font-size: 12px;
+    gap: 12px;
+  }
+
+  .action-buttons {
+    gap: 6px;
+  }
+}

@@ -1,0 +1,378 @@
+.joseki-training {
+  height: calc(100vh - 80px);
+  background: #1a0f0a;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.training-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+}
+
+.training-header h2 {
+  margin: 0;
+  color: #f5de9d;
+  font-size: 28px;
+}
+
+.training-stats {
+  display: flex;
+  gap: 24px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(145deg, #2c1810, #3c2820);
+  border-radius: 6px;
+}
+
+.stat-label {
+  color: #8b7355;
+  font-size: 13px;
+}
+
+.stat-value {
+  color: #f5de9d;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.training-setup {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.setup-card {
+  background: linear-gradient(145deg, #2c1810, #3c2820);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #4a3728;
+  max-width: 500px;
+  width: 100%;
+}
+
+.setup-card h3 {
+  margin: 0 0 30px 0;
+  color: #f5de9d;
+  font-size: 24px;
+  text-align: center;
+}
+
+.setup-options {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-group label {
+  color: #c9b99a;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.option-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.option-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: 1px solid #6b5344;
+  border-radius: 6px;
+  background: transparent;
+  color: #f5f5dc;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+  background: rgba(139, 115, 85, 0.2);
+  border-color: #8b7355;
+}
+
+.option-btn.active {
+  background: linear-gradient(90deg, #4a7c59, #3a6c49);
+  border-color: #2a5c39;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checkbox-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #4a7c59;
+  cursor: pointer;
+}
+
+.checkbox-option label {
+  margin: 0;
+  color: #f5f5dc;
+  font-weight: normal;
+}
+
+.start-btn {
+  width: 100%;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #4a7c59, #3a6c49);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.start-btn:hover {
+  background: linear-gradient(145deg, #5a8c69, #4a7c59);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 124, 89, 0.4);
+}
+
+.start-btn:active {
+  transform: translateY(0);
+}
+
+.error-message {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(196, 69, 54, 0.2);
+  border: 1px solid #c44536;
+  border-radius: 6px;
+}
+
+.error-message p {
+  margin: 0 0 8px 0;
+  color: #c44536;
+  font-size: 13px;
+}
+
+.error-message p:last-child {
+  margin: 0;
+  color: #f39c12;
+}
+
+.error-message .hint {
+  font-size: 12px;
+}
+
+.training-content {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  flex: 1;
+  min-height: 0;
+}
+
+.board-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.feedback {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.feedback-icon {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.feedback.correct {
+  background: rgba(74, 124, 89, 0.3);
+  border: 1px solid #4a7c59;
+  color: #a8d5b5;
+}
+
+.feedback.wrong {
+  background: rgba(196, 69, 54, 0.3);
+  border: 1px solid #c44536;
+  color: #f5a3a3;
+}
+
+.feedback.info {
+  background: rgba(66, 153, 225, 0.3);
+  border: 1px solid #4299e1;
+  color: #93c5fd;
+}
+
+.turn-indicator-training {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background: linear-gradient(90deg, #4a7c59, #3a6c49);
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  animation: pulse 1.5s infinite;
+}
+
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  animation: bounce 0.6s infinite;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.info-section::-webkit-scrollbar {
+  width: 6px;
+}
+
+.info-section::-webkit-scrollbar-track {
+  background: #1a0f0a;
+  border-radius: 3px;
+}
+
+.info-section::-webkit-scrollbar-thumb {
+  background: #6b5344;
+  border-radius: 3px;
+}
+
+.current-joseki {
+  background: linear-gradient(145deg, #2c1810, #3c2820);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.current-joseki h4 {
+  margin: 0 0 12px 0;
+  color: #f5de9d;
+  font-size: 14px;
+}
+
+.current-joseki .joseki-name {
+  color: #f5f5dc;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.current-joseki .joseki-desc {
+  color: #c9b99a;
+  font-size: 13px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.joseki-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.joseki-tags .tag {
+  padding: 4px 10px;
+  background: rgba(139, 115, 85, 0.3);
+  border-radius: 4px;
+  color: #c9b99a;
+  font-size: 12px;
+}
+
+.tips-section {
+  background: linear-gradient(145deg, #2c1810, #3c2820);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.tips-section h4 {
+  margin: 0 0 12px 0;
+  color: #f5de9d;
+  font-size: 14px;
+}
+
+.tips-list {
+  margin: 0;
+  padding-left: 20px;
+  color: #c9b99a;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.tips-list li {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 1200px) {
+  .training-content {
+    grid-template-columns: 1fr;
+  }
+
+  .info-section {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .joseki-training {
+    padding: 16px;
+  }
+
+  .training-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .training-header h2 {
+    font-size: 22px;
+  }
+
+  .training-stats {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .stat-item {
+    padding: 6px 12px;
+  }
+
+  .setup-card {
+    padding: 24px;
+  }
+
+  .option-buttons {
+    flex-direction: column;
+  }
+}
